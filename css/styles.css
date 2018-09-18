@@ -130,7 +130,7 @@ h5, h6 {
 	position: relative;
 	background-color: var(--white);
 	background: rgb(255,255,255);
-background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 10%, rgba(247,247,246,1) 100%);
+	background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 10%, rgba(247,247,246,1) 100%);
 }
 
 #header h5 {
@@ -531,9 +531,7 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 10
 /* SM */
 @media only screen and (max-width: 575px) {
 
-	#header h2 .xs-smalltxt {
-		font-size: 0.8em;
-	}
+
 
 }
 
@@ -544,10 +542,6 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 10
 }
 
 @media only screen and (max-width: 767px) {
-
-	#header .circle {
-		display: none;
-	}
 
 	#age {
 		background-color: var(--yellow);
