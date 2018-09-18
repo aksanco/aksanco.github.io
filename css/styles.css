@@ -547,9 +547,9 @@ h5, h6 {
 
 	.nav .logo {
 		height: 60px;
+		width: auto;
 		display: flex;
 		align-items: center;
-		background-color: red;
 	}
 
 	.nav .logo img {
