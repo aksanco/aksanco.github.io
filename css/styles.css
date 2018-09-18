@@ -549,6 +549,7 @@ h5, h6 {
 		height: 60px;
 		display: flex;
 		align-items: center;
+		background-color: red;
 	}
 
 	.nav .logo img {
