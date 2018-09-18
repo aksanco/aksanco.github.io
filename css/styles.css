@@ -174,25 +174,25 @@ h5, h6 {
 #header h2 .slice:before {
 	-webkit-clip-path: polygon(0 0, 30% 0, 70% 100%, 0 100%);
 	clip-path: polygon(0 0, 30% 0, 70% 100%, 0 100%);
-  left: 0;
-	top: 0;
+	top: 5px;
+	left: 5px;
 }
 
 #header h2 .slice:after {
 	-webkit-clip-path: polygon(30% 0, 100% 0, 100% 100%, 70% 100%);
 	clip-path: polygon(30% 0, 100% 0, 100% 100%, 70% 100%);
-  left: 0;
-	top: 0;
+	top: -5px;
+	left: -5px;
 }
 
 #header:hover h2 .slice:before {
-	top: 5px;
-	left: 5px;
+	top: 0;
+	left: 0;
 }
 
 #header:hover h2 .slice:after {
-	top: -5px;
-	left: -5px;
+	top: 0;
+	left: 0;
 }
 
 /* SERVICES */
