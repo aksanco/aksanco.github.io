@@ -135,13 +135,7 @@ h5, h6 {
 
 #header {
 	position: relative;
-	height: 100vh!important;
 	background-color: var(--white);
-}
-
-#header .row {
-	position: relative;
-	z-index: 10;
 }
 
 #header h5 {
