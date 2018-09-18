@@ -185,12 +185,12 @@ h5, h6 {
 	left: -5px;
 }
 
-#header:hover h2 .slice:before {
+#header h2:hover .slice:before {
 	top: 0;
 	left: 0;
 }
 
-#header:hover h2 .slice:after {
+#header h2:hover .slice:after {
 	top: 0;
 	left: 0;
 }
