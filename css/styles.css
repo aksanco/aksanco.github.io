@@ -155,6 +155,11 @@ h5, h6 {
 }
 */
 
+#header h2 {
+	display: inline;
+	font-weight: 400;
+}
+
 #header h2 .slice {
 	position: relative;
 	display: inline-block;
