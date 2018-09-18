@@ -172,20 +172,21 @@ h5, h6 {
 	content: attr(data-word);
 	position: absolute;
 	overflow: hidden;
+	font-size: 1em;
 }
 
 #header h2 .slice:before {
 	-webkit-clip-path: polygon(0 0, 30% 0, 70% 100%, 0 100%);
 	clip-path: polygon(0 0, 30% 0, 70% 100%, 0 100%);
-  left: 3px;
-	top: 3px;
+  left: 5px;
+	top: 5px;
 }
 
 #header h2 .slice:after {
 	-webkit-clip-path: polygon(30% 0, 100% 0, 100% 100%, 70% 100%);
 	clip-path: polygon(30% 0, 100% 0, 100% 100%, 70% 100%);
-  left: -3px;
-	top: -3px;
+  left: -5px;
+	top: -5px;
 }
 
 /* SERVICES */
@@ -517,7 +518,7 @@ h5, h6 {
 /* SM */
 @media only screen and (max-width: 575px) {
 
-	#header h2 span {
+	#header h2 .xs-smalltxt {
 		font-size: 0.8em;
 	}
 
