@@ -129,6 +129,8 @@ h5, h6 {
 #header {
 	position: relative;
 	background-color: var(--white);
+	background: rgb(255,255,255);
+background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(247,247,246,1) 100%);
 }
 
 #header h5 {
