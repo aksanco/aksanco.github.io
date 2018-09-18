@@ -148,7 +148,7 @@ h5, h6 {
 	transition: 1s all;
 	transition-delay: 1s;
 	background: linear-gradient(to right, var(--green) 0%, var(--yellow) 98%);
-  background-size: 0px 3px;
+  background-size: 0px 2px;
 	background-repeat: no-repeat;
   background-position: left 90%;
 	display: inline;
@@ -157,7 +157,7 @@ h5, h6 {
 }
 
 #header:hover h2 {
-	background-size: 100% 3px;
+	background-size: 100% 2px;
 }
 
 /* SERVICES */
