@@ -136,8 +136,6 @@ h5, h6 {
 #header {
 	position: relative;
 	background-color: var(--white);
-	padding-bottom: 5vh;
-	margin-bottom: -5vh;
 }
 
 #header .row {
@@ -255,10 +253,6 @@ h5, h6 {
 	position: relative;
 	z-index: 20;
 	height: 75vh;
-	border-top-left-radius: 50% 5vh;
-  border-top-right-radius: 50% 5vh;
-	margin-top: ;
-	overflow: hidden;
 }
 
 #video .video-wrap {
