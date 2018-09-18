@@ -160,6 +160,34 @@ h5, h6 {
 	background-size: 100% 2px;
 }
 
+#header h2 .slice {
+	position: relative;
+	display: inline-block;
+	visibility: hidden;
+}
+
+#header h2 .slice:before,
+#header h2 .slice:after {
+	visibility: visible;
+	content: attr(data-word);
+	position: absolute;
+	overflow: hidden;
+}
+
+#header h2 .slice:before {
+	-webkit-clip-path: polygon(0 0, 30% 0, 70% 100%, 0 100%);
+	clip-path: polygon(0 0, 30% 0, 70% 100%, 0 100%);
+  left: 3px;
+	top: 3px;
+}
+
+#header h2 .slice:after {
+	-webkit-clip-path: polygon(30% 0, 100% 0, 100% 100%, 70% 100%);
+	clip-path: polygon(30% 0, 100% 0, 100% 100%, 70% 100%);
+  left: -3px;
+	top: -3px;
+}
+
 /* SERVICES */
 
 #services {
@@ -263,7 +291,7 @@ h5, h6 {
 	object-fit: cover;
 	width: 100%;
 	height: 100%;
-	filter: grayscale(100%) brightness(150%) contrast(50%);
+	filter: grayscale(100%) brightness(125%) contrast(50%);
 	opacity: 0.75;
 }
 
