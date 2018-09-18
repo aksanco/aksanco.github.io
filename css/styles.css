@@ -135,6 +135,7 @@ h5, h6 {
 
 #header {
 	position: relative;
+	height: 100vh;
 	background-color: var(--white);
 }
 
