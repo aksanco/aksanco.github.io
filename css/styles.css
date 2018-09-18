@@ -42,7 +42,7 @@ a, a:active, a:hover, a:visited {
 	background-size: 0% 100%;
   background-image: linear-gradient(var(--yellow), var(--yellow));
   background-repeat: no-repeat;
-	background-color: var(--yellow);
+	background:linear-gradient(135deg, #fdeb71 0%,#f8d800 100%);
 	transition: 0.3s all;
 	border-radius: 5px;
 }
@@ -136,8 +136,6 @@ h5, h6 {
 #header {
 	position: relative;
 	background-color: var(--white);
-	background: white;
-	background:linear-gradient(135deg, #f8f8f8 0%,#efefef 100%);
 }
 
 #header h5 {
