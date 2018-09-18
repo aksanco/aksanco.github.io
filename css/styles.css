@@ -158,6 +158,7 @@ h5, h6 {
 #header h2 {
 	display: inline;
 	font-weight: 400;
+	letter-spacing: -1px;
 }
 
 #header h2 .slice {
