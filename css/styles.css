@@ -38,18 +38,11 @@ a, a:active, a:hover, a:visited {
 	text-transform: capitalize;
 	display: inline-block;
 	padding: 15px 45px;
-	border: 0px solid var(--darkgray);
-	background-size: 0% 100%;
-  background-image: linear-gradient(var(--yellow), var(--yellow));
-  background-repeat: no-repeat;
 	background:linear-gradient(135deg, #fdeb71 0%,#f8d800 100%);
-	transition: 0.3s all;
 	border-radius: 5px;
 }
 
 .small-link:hover {
-	background-size: 100% 100%;
-	border-color: var(--green);
 	color: #333;
 	text-decoration: underline;
 }
@@ -143,6 +136,7 @@ h5, h6 {
 	letter-spacing: 3px;
 }
 
+/*
 #header h2 {
 	font-weight: 400;
 	transition: 1s all;
@@ -159,6 +153,7 @@ h5, h6 {
 #header:hover h2 {
 	background-size: 100% 2px;
 }
+*/
 
 #header h2 .slice {
 	position: relative;
@@ -173,20 +168,31 @@ h5, h6 {
 	position: absolute;
 	overflow: hidden;
 	font-size: 1em;
+	transition: 0.3s all;
 }
 
 #header h2 .slice:before {
 	-webkit-clip-path: polygon(0 0, 30% 0, 70% 100%, 0 100%);
 	clip-path: polygon(0 0, 30% 0, 70% 100%, 0 100%);
   left: 0;
-	top: 5px;
+	top: 0;
 }
 
 #header h2 .slice:after {
 	-webkit-clip-path: polygon(30% 0, 100% 0, 100% 100%, 70% 100%);
 	clip-path: polygon(30% 0, 100% 0, 100% 100%, 70% 100%);
   left: 0;
+	top: 0;
+}
+
+#header:hover h2 .slice:before {
+	top: 5px;
+	left: 5px;
+}
+
+#header:hover h2 .slice:after {
 	top: -5px;
+	left: -5px;
 }
 
 /* SERVICES */
