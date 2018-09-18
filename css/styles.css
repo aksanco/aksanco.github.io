@@ -553,7 +553,7 @@ h5, h6 {
 	}
 
 	.nav .logo img {
-		height: 20px;
+		height: 20px!important;
 	}
 
 	.nav label i {
