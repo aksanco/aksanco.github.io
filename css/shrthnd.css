@@ -1,0 +1,179 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+.font-m1 { font-size: 0.9em; }
+.font-m2 { font-size: 0.8em; }
+.font-m3 { font-size: 0.7em; }
+.font-m4 { font-size: 0.6em; }
+
+.font-p1 { font-size: 1.1em; }
+.font-p2 { font-size: 1.2em; }
+.font-p3 { font-size: 1.3em; }
+.font-p4 { font-size: 1.4em; }
+
+.txt-left {
+  text-align: left;
+}
+
+.txt-right {
+  text-align: right;
+}
+
+.txt-center {
+  text-align: center;
+}
+
+.font-serif {
+  font-family: 'Libre Baskerville', serif;
+}
+
+.font-sans {
+  font-family: 'Work Sans', sans-serif;
+}
+
+.subtitle {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 0.9em;
+}
+
+.vert-align {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.vert-align .col {
+  flex: none;
+}
+
+.pos-rel {
+	position: relative;
+}
+
+.pos-abs {
+	position: absolute;
+}
+
+.no-pad {
+  padding: 0!important;
+}
+
+.top-pad {
+  padding-top: 5vh!important;
+}
+
+.img-cover {
+  overflow: hidden;
+}
+
+.img-cover img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.btn {
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  margin: 15px 0;
+  font-size: 0.8em;
+  transition: 0.3s all;
+}
+
+.btn:hover {
+  text-decoration: none;
+}
+
+.rounded {
+  border-radius: 5px;
+}
+
+.yellow {
+  background-color: var(--yellow);
+  border: none;
+  color: #333!important;
+}
+
+.yellow:hover {
+  background-color: var(--dark-yellow);
+}
+
+.bg-green {
+  background-color: var(--green);
+}
+
+.bg-yellow {
+  background-color: var(--yellow);
+}
+
+.bg-darkgray {
+  background-color: var(--dark-gray);
+}
+
+@media only screen and (max-width: 575px) {
+
+  .xs-center {
+    text-align: center!important;
+  }
+
+}
+
+@media only screen and (min-width: 768px) {
+
+
+
+}
+
+@media only screen and (min-width: 1200px) {
+
+  .push-up-15 {
+    position: relative;
+    top: -15px;
+    display: inline-block;
+  }
+
+  .push-left-15 {
+    position: relative;
+    left: -15px;
+    display: block;
+  }
+
+  .push-left-30 {
+    position: relative;
+    left: -30px;
+    display: block;
+  }
+
+  .push-left-60 {
+    position: relative;
+    left: -60px;
+    display: block;
+  }
+
+  .push-right-15 {
+    position: relative;
+    left: 15px;
+  }
+
+  .push-right-30 {
+    position: relative;
+    left: 30px;
+  }
+
+  .push-right-45 {
+    position: relative;
+    left: 45px;
+  }
+
+  .push-right-60 {
+    position: relative;
+    left: 60px;
+  }
+
+}

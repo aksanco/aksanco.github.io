@@ -1,0 +1,485 @@
+@charset "utf-8";
+/* CSS Document */
+
+:root {
+  --link-active: #014EA5;
+  --link-hover: #F06969;
+}
+
+body {
+  opacity: 1;
+  transition: 0.5s opacity;
+  --body-bgcolor: #fff;
+  background-color: var(--body-bgcolor);
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 13px;
+	line-height: 1.5em!important;
+	font-family: 'Work Sans', sans-serif;
+	color: #333;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+*:focus {
+  outline: none;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+img {
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 1em 0!important;
+  padding: 0!important;
+	line-height: 1.25em;
+  font-weight: bold;
+}
+
+h1 { font-size: 3.298em; }
+h2 { font-size: 2.827em; }
+h3 { font-size: 1.999em; }
+h4 { font-size: 1.414em; }
+h5 { font-size: 1em; }
+h6 { font-size: 0.707em; }
+
+p {
+	margin: 2em 0!important;
+	width: 100%;
+  font-weight: 400;
+}
+
+.alone {
+  margin: 0!important;
+}
+
+a, a:active, a:hover, a:visited {
+	text-decoration-line: underline;
+  text-underline-position: under;
+  text-decoration-style: dotted;
+  text-decoration-skip: ink;
+  color: var(--link-active);
+  font-weight: inherit;
+  font-weight: 500;
+}
+
+a:hover {
+	color: var(--link-hover);
+  text-decoration-color: inherit;
+}
+
+b { font-weight: 700; }
+
+.contain {
+	width: 100%;
+  float: left;
+}
+
+.wrap {
+  --wrap-pad: 12.5vh;
+  padding: var(--wrap-pad) 0;
+  height: 100%;
+}
+
+.more-pad {
+  padding: calc(var(--wrap-pad) * 2) 0;
+}
+
+.less-pad {
+  padding: calc(var(--wrap-pad) * 0.5) 0;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+  width: 90%;
+	overflow: visible;
+	margin: 0 auto;
+}
+
+.full-width {
+  width: 90%!important;
+}
+
+.col {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.box {
+	float: left;
+	width: 100%;
+	height: 100%;
+  padding: 15px 15px;
+}
+
+.section-title {
+  margin-bottom: calc(var(--wrap-pad) * 0.25)!important;
+}
+
+
+/* RESPONSIVE NAV */
+
+.nav {
+  --nav-height: 60px;
+  height: var(--nav-height);
+  padding: 0 15px;
+}
+
+.nav .row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.nav input {
+  opacity: 0!important;
+  position: absolute!important;
+  pointer-events: none!important;
+}
+
+.nav label {
+  float: right;
+  width: var(--nav-height);
+  height: var(--nav-height);
+  display: flex;
+  justify-content: center;
+}
+
+.nav label i {
+  line-height: var(--nav-height);
+  font-size: 2em;
+}
+
+.nav .logo {
+  width: 100px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.nav .logo img {
+  height: 100%;
+  max-height: calc(var(--nav-height) - 20px);
+  width: auto;
+}
+
+.main-nav {
+  display: none;
+  width: 100%;
+  float: left;
+}
+
+.nav input[type=checkbox]:checked ~ .main-nav {
+  display: block;
+}
+
+.main-nav .menu {
+  float: right;
+  width: 100%;
+}
+
+
+a[data-tooltip] {
+	display: inline-block;/*bug fix*/
+	position: relative;
+	text-decoration: none;
+}
+
+a[data-tooltip]:after {
+	content: attr(data-tooltip);
+  font-size: 0.8em;
+	position: absolute;
+	bottom: calc(100% + 30px);
+	left: 50%;
+  transform: translateX(-50%);
+	background-color: var(--yellow);
+	padding: 5px 15px;
+	color: black;
+	white-space: nowrap;
+	opacity: 0;
+	transition: all 0.3s ease;
+}
+
+a[data-tooltip]:before {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-top: 10px solid var(--yellow);
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	transition: all 0.3s ease;
+	opacity: 0;
+	left: 50%;
+	bottom: calc(100% + 20px);
+  margin-left: -10px;
+}
+
+a[data-tooltip]:hover:after {
+	bottom: calc(100% + 10px);
+}
+
+a[data-tooltip]:hover:before {
+	bottom: 100%;
+}
+
+a[data-tooltip]:hover:after,
+a[data-tooltip]:hover:before {
+	opacity: 1;
+}
+
+
+/* XS */
+
+.xs-1 { flex-basis: 8.333%; max-width: 8.333%; }
+.xs-2 { flex-basis: 16.667%; max-width: 16.667%; }
+.xs-3 { flex-basis: 25%; max-width: 25%; }
+.xs-4 { flex-basis: 33.333%; max-width: 33.333%; }
+.xs-5 { flex-basis: 41.667%; max-width: 41.667%; }
+.xs-6 { flex-basis: 50%; max-width: 50%; }
+.xs-7 { flex-basis: 58.333%; max-width: 58.333%; }
+.xs-8 { flex-basis: 66.667%; max-width: 66.667%; }
+.xs-9 { flex-basis: 75%; max-width: 75%; }
+.xs-10 { flex-basis: 83.333%; max-width: 83.333%; }
+.xs-11 { flex-basis: 91.667%; max-width: 91.667%; }
+.xs-12 { flex-basis: 100%; max-width: 100%; }
+
+.xs-os-0 { margin-left: 0; }
+.xs-os-1 { margin-left: 8.333%; }
+.xs-os-2 { margin-left: 16.667%; }
+.xs-os-3 { margin-left: 25%; }
+.xs-os-4 { margin-left: 33.333%; }
+.xs-os-5 { margin-left: 41.667%; }
+.xs-os-6 { margin-left: 50%; }
+.xs-os-7 { margin-left: 58.333%; }
+.xs-os-8 { margin-left: 66.667%; }
+.xs-os-9 { margin-left: 75%; }
+.xs-os-10 { margin-left: 83.333%; }
+.xs-os-11 { margin-left: 91.667%; }
+
+.xs-no { display: none; }
+
+
+/* SM */
+
+@media only screen and (min-width: 576px) {
+
+	html {
+		font-size: 14px;
+	}
+
+	.sm-1 { flex-basis: 8.333%; max-width: 8.333%; }
+	.sm-2 { flex-basis: 16.667%; max-width: 16.667%; }
+	.sm-3 { flex-basis: 25%; max-width: 25%; }
+	.sm-4 { flex-basis: 33.333%; max-width: 33.333%; }
+	.sm-5 { flex-basis: 41.667%; max-width: 41.667%; }
+	.sm-6 { flex-basis: 50%; max-width: 50%; }
+	.sm-7 { flex-basis: 58.333%; max-width: 58.333%; }
+	.sm-8 { flex-basis: 66.667%; max-width: 66.667%; }
+	.sm-9 { flex-basis: 75%; max-width: 75%; }
+	.sm-10 { flex-basis: 83.333%; max-width: 83.333%; }
+	.sm-11 { flex-basis: 91.667%; max-width: 91.667%; }
+	.sm-12 { flex-basis: 100%; max-width: 100%; }
+
+	.sm-os-0 { margin-left: 0; }
+	.sm-os-1 { margin-left: 8.333%; }
+	.sm-os-2 { margin-left: 16.667%; }
+	.sm-os-3 { margin-left: 25%; }
+	.sm-os-4 { margin-left: 33.333%; }
+	.sm-os-5 { margin-left: 41.667%; }
+	.sm-os-6 { margin-left: 50%; }
+	.sm-os-7 { margin-left: 58.333%; }
+	.sm-os-8 { margin-left: 66.667%; }
+	.sm-os-9 { margin-left: 75%; }
+	.sm-os-10 { margin-left: 83.333%; }
+	.sm-os-11 { margin-left: 91.667%; }
+
+	.xs-no { display: inline; }
+
+	.sm-no { display: none; }
+
+}
+
+
+/* MD */
+
+@media only screen and (min-width: 768px) {
+
+	html {
+		font-size: 15px;
+	}
+
+	.md-1 { flex-basis: 8.333%; max-width: 8.333%; }
+	.md-2 { flex-basis: 16.667%; max-width: 16.667%; }
+	.md-3 { flex-basis: 25%; max-width: 25%; }
+	.md-4 { flex-basis: 33.333%; max-width: 33.333%; }
+	.md-5 { flex-basis: 41.667%; max-width: 41.667%; }
+	.md-6 { flex-basis: 50%; max-width: 50%; }
+	.md-7 { flex-basis: 58.333%; max-width: 58.333%; }
+	.md-8 { flex-basis: 66.667%; max-width: 66.667%; }
+	.md-9 { flex-basis: 75%; max-width: 75%; }
+	.md-10 { flex-basis: 83.333%; max-width: 83.333%; }
+	.md-11 { flex-basis: 91.667%; max-width: 91.667%; }
+	.md-12 { flex-basis: 100%; max-width: 100%; }
+
+	.md-os-0 { margin-left: 0; }
+	.md-os-1 { margin-left: 8.333%; }
+	.md-os-2 { margin-left: 16.667%; }
+	.md-os-3 { margin-left: 25%; }
+	.md-os-4 { margin-left: 33.333%; }
+	.md-os-5 { margin-left: 41.667%; }
+	.md-os-6 { margin-left: 50%; }
+	.md-os-7 { margin-left: 58.333%; }
+	.md-os-8 { margin-left: 66.667%; }
+	.md-os-9 { margin-left: 75%; }
+	.md-os-10 { margin-left: 83.333%; }
+	.md-os-11 { margin-left: 91.667%; }
+
+	.sm-no { display: inline; }
+
+	.md-no { display: none; }
+
+}
+
+
+/* BG*/
+
+@media only screen and (min-width: 992px) {
+
+	html {
+		font-size: 16px;
+	}
+
+	.bg-1 { flex-basis: 8.333%; max-width: 8.333%; }
+	.bg-2 { flex-basis: 16.667%; max-width: 16.667%; }
+	.bg-3 { flex-basis: 25%; max-width: 25%; }
+	.bg-4 { flex-basis: 33.333%; max-width: 33.333%; }
+	.bg-5 { flex-basis: 41.667%; max-width: 41.667%; }
+	.bg-6 { flex-basis: 50%; max-width: 50%; }
+	.bg-7 { flex-basis: 58.333%; max-width: 58.333%; }
+	.bg-8 { flex-basis: 66.667%; max-width: 66.667%; }
+	.bg-9 { flex-basis: 75%; max-width: 75%; }
+	.bg-10 { flex-basis: 83.333%; max-width: 83.333%; }
+	.bg-11 { flex-basis: 91.667%; max-width: 91.667%; }
+	.bg-12 { flex-basis: 100%; max-width: 100%; }
+
+	.bg-os-0 { margin-left: 0; }
+	.bg-os-1 { margin-left: 8.333%; }
+	.bg-os-2 { margin-left: 16.667%; }
+	.bg-os-3 { margin-left: 25%; }
+	.bg-os-4 { margin-left: 33.333%; }
+	.bg-os-5 { margin-left: 41.667%; }
+	.bg-os-6 { margin-left: 50%; }
+	.bg-os-7 { margin-left: 58.333%; }
+	.bg-os-8 { margin-left: 66.667%; }
+	.bg-os-9 { margin-left: 75%; }
+	.bg-os-10 { margin-left: 83.333%; }
+	.bg-os-11 { margin-left: 91.667%; }
+
+	.md-no { display: inline; }
+
+	.bg-no { display: none; }
+
+}
+
+
+/* LG */
+
+@media only screen and (min-width: 1200px) {
+
+	html {
+		font-size: 17px;
+	}
+
+  .row {
+    width: 1200px;
+  }
+
+	.lg-1 { flex-basis: 8.333%; max-width: 8.333%; }
+	.lg-2 { flex-basis: 16.667%; max-width: 16.667%; }
+	.lg-3 { flex-basis: 25%; max-width: 25%; }
+	.lg-4 { flex-basis: 33.333%; max-width: 33.333%; }
+	.lg-5 { flex-basis: 41.667%; max-width: 41.667%; }
+	.lg-6 { flex-basis: 50%; max-width: 50%; }
+	.lg-7 { flex-basis: 58.333%; max-width: 58.333%; }
+	.lg-8 { flex-basis: 66.667%; max-width: 66.667%; }
+	.lg-9 { flex-basis: 75%; max-width: 75%; }
+	.lg-10 { flex-basis: 83.333%; max-width: 83.333%; }
+	.lg-11 { flex-basis: 91.667%; max-width: 91.667%; }
+	.lg-12 { flex-basis: 100%; max-width: 100%; }
+
+	.lg-os-0 { margin-left: 0; }
+	.lg-os-1 { margin-left: 8.333%; }
+  .lg-os-2 {margin-left: 16.667%; }
+	.lg-os-3 { margin-left: 25%; }
+	.lg-os-4 { margin-left: 33.333%; }
+	.lg-os-5 { margin-left: 41.667%; }
+	.lg-os-6 { margin-left: 50%; }
+	.lg-os-7 { margin-left: 58.333%; }
+	.lg-os-8 { margin-left: 66.667%; }
+	.lg-os-9 { margin-left: 75%; }
+	.lg-os-10 { margin-left: 83.333%; }
+	.lg-os-11 { margin-left: 91.667%; }
+
+	.bg-no { display: inline; }
+
+	.lg-no { display: none; }
+
+  /* SHOW FULL NAV */
+
+  .nav {
+    padding: 0;
+  }
+
+  .nav label { display: none!important; }
+
+  .main-nav {
+    display: inline-block;
+    width: auto;
+  }
+
+  .main-nav .menu {
+    float: right;
+    width: auto;
+    background: transparent;
+  }
+
+  .nav .menu li {
+    display: inline-block;
+    float: left;
+    width: auto;
+  }
+
+  .nav .menu li a {
+    line-height: var(--header-height);
+    padding: 0 15px;
+    float: left;
+  }
+
+}
+
+@media only screen and (min-width: 1440px) {
+
+
+
+}
