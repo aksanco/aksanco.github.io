@@ -135,7 +135,7 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 10
 
 #header h5 {
 	font-weight: 400;
-	letter-spacing: 3px;
+	letter-spacing: 1px;
 }
 
 /*
@@ -160,7 +160,6 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 10
 #header h2 {
 	display: inline;
 	font-weight: 400;
-	letter-spacing: -1px;
 }
 
 #header h2 .slice {
