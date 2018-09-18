@@ -178,14 +178,14 @@ h5, h6 {
 #header h2 .slice:before {
 	-webkit-clip-path: polygon(0 0, 30% 0, 70% 100%, 0 100%);
 	clip-path: polygon(0 0, 30% 0, 70% 100%, 0 100%);
-  left: 5px;
+  left: 0;
 	top: 5px;
 }
 
 #header h2 .slice:after {
 	-webkit-clip-path: polygon(30% 0, 100% 0, 100% 100%, 70% 100%);
 	clip-path: polygon(30% 0, 100% 0, 100% 100%, 70% 100%);
-  left: -5px;
+  left: 0;
 	top: -5px;
 }
 
