@@ -38,7 +38,7 @@ a, a:active, a:hover, a:visited {
 	text-transform: capitalize;
 	display: inline-block;
 	padding: 15px 45px;
-	background:linear-gradient(135deg, #fdeb71 0%,#f8d800 100%);
+	background: linear-gradient(135deg, #fdeb71 0%, #f8d800 100%);
 	border-radius: 5px;
 }
 
@@ -131,11 +131,11 @@ h5, h6 {
 	background-color: var(--white);
 	background: rgb(255,255,255);
 	background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 10%, rgba(247,247,246,1) 100%);
-}
-
-#header h5 {
-	font-weight: 400;
-	letter-spacing: 1px;
+	-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 50% calc(100% - 5vh), 0 100%);
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 50% calc(100% - 5vh), 0 100%);
+	margin-bottom: -5vh;
+	padding-bottom: 5vh;
+	z-index: 200;
 }
 
 /*
@@ -289,7 +289,10 @@ h5, h6 {
 #video {
 	position: relative;
 	z-index: 20;
-	height: 75vh;
+	height: 85vh;
+	-webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5vh), 50% 100%, 0 calc(100% - 5vh));
+	clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5vh), 50% 100%, 0 calc(100% - 5vh));
+	margin-bottom: -5vh;
 }
 
 #video .video-wrap {
@@ -665,7 +668,7 @@ h5, h6 {
 		width: 100px;
 		height: 100px;
 		transition: 0.3s all;
-		background-color: var(--white);
+		background-color: var(--black);
 	}
 
 	@keyframes rotated {
