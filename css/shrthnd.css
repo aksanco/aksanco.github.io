@@ -131,7 +131,7 @@
 
 @media only screen and (min-width: 768px) {
 
-  
+
 
 }
 
@@ -152,7 +152,7 @@
   .push-left-30 {
     position: relative;
     left: -30px;
-    display: inline-block;
+    display: block;
   }
 
   .push-left-60 {
