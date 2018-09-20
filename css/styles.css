@@ -146,6 +146,7 @@ h5, h6 {
 #header .tag {
 	display: inline;
 	margin-top: 0!important;
+	letter-spacing: 2px;
 }
 
 #header .tag b {
@@ -179,7 +180,7 @@ h5, h6 {
 	-webkit-clip-path: polygon(30% 0, 100% 0, 100% 100%, 70% 100%);
 	clip-path: polygon(30% 0, 100% 0, 100% 100%, 70% 100%);
 	top: -0.075em;
-	left: -0.25em;
+	left: -0.2em;
 }
 
 #header .tag:hover .slice:before {
@@ -195,7 +196,7 @@ h5, h6 {
 /* SERVICES */
 
 #services {
-	background-color: white;
+	background-color: var(--white);
 	position: relative;
 }
 
@@ -203,31 +204,7 @@ h5, h6 {
 	height: 100%;
 	display: flex;
 	flex-direction: column;
-	padding: 30px;
-	box-shadow: 0 0 0 var(--white);
-	position: relative;
-	background-color: white;
-	box-shadow: 0 5px 20px rgba(0,0,0,0.075);
-}
-
-#services .card:before {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background-color: transparent;
-	transition: 0.3s all;
-}
-
-#services .card:hover:before {
-	top: -15px;
-	left: -15px;
-	right: -15px;
-	bottom: -15px;
-	background-color: var(--black);
-	z-index: 10;
+	padding: 30px 0;
 }
 
 .card-title,
@@ -240,37 +217,37 @@ h5, h6 {
 
 .card-body {
 	flex-grow: 1;
+	margin: 2em 0;
+}
+
+.card-body p {
+	transition: 1s all;
+	background: linear-gradient(to right, var(--yellow) 0%, var(--yellow) 100%);
+  background-size: 0px 1em;
+	background-repeat: no-repeat;
+  background-position: left 100%;
+	display: inline;
+}
+
+.card:hover .card-body p {
+  background-size: 100% 1em;
 }
 
 .card-title {
 	position: relative;
 }
 
-.card-title h5 {
+.card-title h4 {
 	display: inline-block;
 	position: relative;
+	margin: 0!important;
 }
 
-.card:hover .card-title h5,
+.card:hover .card-title h4,
 .card:hover .card-body,
 .card:hover .card-link {
-	color: var(--green);
+	color: #333;
 	z-index: 20;
-}
-
-.card-title h5:before {
-	content: "";
-	position: absolute;
-	bottom: -10px;
-	left: 0;
-	height: 2px;
-	width: 30px;
-	background-color: var(--green);
-	transition: 0.3s all;
-}
-
-.card:hover .card-title h5:before {
-	width: 100%;
 }
 
 
@@ -635,7 +612,7 @@ h5, h6 {
 		width: 100px;
 		height: 100vh;
 		overflow: hidden;
-		transition: 0.7s ease all;
+		transition: 0.3s ease all;
 		padding-bottom: 100px;
 	}
 
