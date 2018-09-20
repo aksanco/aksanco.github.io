@@ -16,7 +16,7 @@ body {
 html {
 	box-sizing: border-box;
 	font-size: 13px;
-	line-height: 1.5em!important;
+	line-height: 1.85em!important;
 	font-family: 'Work Sans', sans-serif;
 	color: #333;
 }
@@ -90,7 +90,7 @@ b { font-weight: 700; }
 }
 
 .wrap {
-  --wrap-pad: 12.5vh;
+  --wrap-pad: 15vh;
   padding: var(--wrap-pad) 0;
   height: 100%;
 }
