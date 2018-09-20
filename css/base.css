@@ -90,7 +90,7 @@ b { font-weight: 700; }
 }
 
 .wrap {
-  --wrap-pad: 15vh;
+  --wrap-pad: 10vh;
   padding: var(--wrap-pad) 0;
   height: 100%;
 }
