@@ -25,7 +25,7 @@
 .black-bg { background-color: var(--black)!important; }
 
 body {
-	background-color: var(--white);
+	background-color: white;
 }
 
 a, a:active, a:hover, a:visited {
@@ -112,13 +112,17 @@ p {
 
 /* INFO */
 
+#info {
+	background-color: var(--white);
+}
+
 #info .box  {
-	padding-top: 15px;
-	padding-bottom: 15px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 #info .row {
-	border-bottom: 1px solid rgba(0,0,0,0.15);
+	border-bottom: 1px solid rgba(0,0,0,0.2);
 }
 
 #info h5 {
@@ -128,118 +132,14 @@ p {
 /* HEADER */
 
 #header {
-	position: relative;
-	background-color: var(--white);
 	background: rgb(255,255,255);
 	background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(247,247,246,1) 100%);
-	z-index: 200;
 }
 
-/*
-#header h2 {
-	font-weight: 400;
-	transition: 1s all;
-	transition-delay: 1s;
-	background: linear-gradient(to right, var(--green) 0%, var(--yellow) 98%);
-  background-size: 0px 2px;
-	background-repeat: no-repeat;
-  background-position: left 90%;
-	display: inline;
-	text-shadow: 5px 0 0  var(--white),
-							-5px 0 0 var(--white);
-}
-
-#header:hover h2 {
-	background-size: 100% 2px;
-}
-*/
-
-#header .tag {
-	display: inline;
-}
-
-#header .tag b {
-	font-weight: 700;
-}
-
-/* SERVICES */
-
-#services {
-	background-color: white;
-	position: relative;
-}
-
-#services .card {
-	height: 100%;
-	display: flex;
-	flex-direction: column;
-}
-
-.card-title,
-.card-body,
-.card-link {
-	float: left;
-	width: 100%;
-	position: relative;
-}
-
-.card-body {
-	flex-grow: 1;
-	margin: 2em 0;
-}
-
-.card-body p {
-	transition: 1s all;
-	background: linear-gradient(to right, var(--yellow) 0%, var(--yellow) 100%);
-  background-size: 0px 1em;
-	background-repeat: no-repeat;
-  background-position: left 100%;
-	display: inline;
-}
-
-.card:hover .card-body p {
-  background-size: 100% 1em;
-}
-
-.card-title {
-	position: relative;
-}
-
-.card-title h4 {
-	display: inline-block;
-	position: relative;
-	margin: 0!important;
-}
-
-.card-title h4:after {
-	content: "";
-	position: absolute;
-	top: 110%;
-	left: 0;
-	width: 100%;
-	height: 1px;
-	background-color: var(--green);
-}
-
-/*
-.card-title h4:before {
-	content: attr(data-text);
-	position: absolute;
-	right: 110%;
+#header .tag span {
+	font-size: 0.5em;
 	color: var(--green);
-	font-weight: 700;
-	font-size: 0.8em;
-	font-style: italic;
 }
-*/
-
-.card:hover .card-title h4,
-.card:hover .card-body,
-.card:hover .card-link {
-	color: #333;
-	z-index: 20;
-}
-
 
 /* VIDEO */
 
@@ -247,7 +147,6 @@ p {
 	position: relative;
 	z-index: 20;
 	height: 65vh;
-	background-color: white;
 }
 
 #video .video-wrap {
@@ -278,7 +177,47 @@ p {
 	height: 100%;
 	position: relative;
 	opacity: 0.5;
-	filter: grayscale(100%) contrast(150%) brightness(135%);
+	filter: grayscale(100%) contrast(150%) brightness(75%);
+}
+
+/* SERVICES */
+
+#services .card {
+	height: 100%;
+}
+
+.card-title,
+.card-body {
+	float: left;
+	width: 100%;
+}
+
+.card-body p {
+	transition: 1s all;
+	background: linear-gradient(to right, var(--yellow) 0%, var(--yellow) 100%);
+  background-size: 0px 1em;
+	background-repeat: no-repeat;
+  background-position: left 100%;
+	display: inline;
+}
+
+.card:hover .card-body p {
+  background-size: 100% 1em;
+}
+
+.card-title h4 {
+	display: inline-block;
+	position: relative;
+}
+
+.card-title h4:after {
+	content: "";
+	position: absolute;
+	top: 110%;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background-color: var(--green);
 }
 
 /* AGE */
@@ -671,6 +610,11 @@ p {
 		display: block;
 		width: 100vw;
 		float: left;
+		border-top: 1px solid rgba(255,255,255,0.1);
+	}
+
+	.main-nav .menu li:first-of-type {
+		border-top: none;
 	}
 
 	.main-nav .menu li a {
@@ -681,12 +625,16 @@ p {
 		transition: 0.3s all;
 	}
 
+	.main-nav .menu li a i,
+	.main-nav .menu li a span {
+		line-height: 75px;
+	}
+
 	.main-nav .menu li a i {
 		display: inline-block;
 		width: 100px;
 		text-align: center;
 		font-size: 1.5em;
-		line-height: 75px;
 		float: left;
 	}
 
@@ -695,14 +643,14 @@ p {
 		text-transform: uppercase;
 		font-weight: 400;
 		font-size: 1em;
-		line-height: 75px;
 		letter-spacing: 2px;
 		float: left;
 		transition: 0.3s all;
+		color: rgba(255,255,255,0.2);
 	}
 
 	.main-nav .menu li:hover a span {
-		padding-left: 15px;
+		color: var(--green);
 	}
 
 }
