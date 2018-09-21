@@ -63,7 +63,6 @@ a:hover {
 h1, h2, h3, h4 {
   font-family: 'Merriweather', serif;
 	font-weight: 700;
-	letter-spacing: 1px;
 }
 
 h5, h6 {
@@ -113,8 +112,13 @@ p {
 
 /* INFO */
 
+#info .box  {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
 #info .row {
-	border-bottom: 1px solid #f0f0f0;
+	border-bottom: 1px solid rgba(0,0,0,0.15);
 }
 
 #info h5 {
@@ -210,10 +214,10 @@ p {
 .card-title h4:after {
 	content: "";
 	position: absolute;
-	bottom: -0.25em;
+	top: 110%;
 	left: 0;
 	width: 100%;
-	height: 2px;
+	height: 1px;
 	background-color: var(--green);
 }
 
@@ -282,16 +286,16 @@ p {
 #age {
 	position: relative;
 	overflow: hidden;
-	background-color: var(--white);
+	background-color: var(--yellow);
 }
 
 #age p {
-	color: #aaa;
+
 }
 
 #age .age-box {
 	width: 100%;
-	background-color: var(--yellow);
+	border: 3px solid black;
 	padding-top: 100%;
 	float: left;
 	position: relative;
