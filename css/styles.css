@@ -148,7 +148,6 @@ p {
 
 #header .tag {
 	display: inline;
-	margin-top: 0!important;
 }
 
 #header .tag b {
@@ -198,7 +197,7 @@ p {
 /* SERVICES */
 
 #services {
-	background-color: var(--white);
+	background-color: white;
 	position: relative;
 }
 
@@ -206,7 +205,6 @@ p {
 	height: 100%;
 	display: flex;
 	flex-direction: column;
-	padding: 2vh 0;
 }
 
 .card-title,
@@ -245,6 +243,7 @@ p {
 	margin: 0!important;
 }
 
+/*
 .card-title h4:before {
 	content: attr(data-text);
 	position: absolute;
@@ -254,6 +253,7 @@ p {
 	font-size: 0.8em;
 	font-style: italic;
 }
+*/
 
 .card:hover .card-title h4,
 .card:hover .card-body,
@@ -268,7 +268,8 @@ p {
 #video {
 	position: relative;
 	z-index: 20;
-	height: 60vh;
+	height: 65vh;
+	background: linear-gradient(to bottom, var(--white) 25%, white 25%);
 }
 
 #video .video-wrap {
@@ -279,8 +280,18 @@ p {
 	bottom: 0;
 	overflow: hidden;
 	background-color: var(--green);
-	border-top-right-radius: 50% 30px;
-	border-top-left-radius: 50% 30px;
+	-webkit-clip-path: polygon(50% 10%, 70% 0, 100% 0, 100% 90%, 70% 90%, 50% 100%, 30% 90%, 0 90%, 0 0, 30% 0);
+clip-path: polygon(50% 10%, 70% 0, 100% 0, 100% 90%, 70% 90%, 50% 100%, 30% 90%, 0 90%, 0 0, 30% 0);
+}
+
+#video .video-wrap:after {
+	content: "";
+	position: absolute;
+	top: -1px;
+	right: -1px;
+	bottom: -1px;
+	left: -1px;
+
 }
 
 #video .video-wrap video {
@@ -606,6 +617,16 @@ p {
 
 	.full-wrap {
 		padding-left: 100px;
+	}
+
+	#info,
+	#header,
+	#video,
+	#services,
+	#age,
+	#projects,
+	#clients,
+	#footer {
 		padding-right: 100px;
 	}
 
