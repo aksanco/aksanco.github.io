@@ -62,7 +62,8 @@ a:hover {
 
 h1, h2, h3, h4 {
   font-family: 'Merriweather', serif;
-	font-weight: 400;
+	font-weight: 700;
+	letter-spacing: 1px;
 }
 
 h5, h6 {
@@ -70,6 +71,15 @@ h5, h6 {
 	text-transform: uppercase;
 	font-weight: 400;
 	letter-spacing: 1px;
+}
+
+p {
+	font-family: 'Merriweather', serif;
+	font-weight: 300;
+}
+
+.section-title {
+	margin-top: 0!important;
 }
 
 .full-wrap {
@@ -101,12 +111,6 @@ h5, h6 {
 
 /* INFO */
 
-#info {
-	position: relative;
-	z-index: 300;
-	margin-bottom: -100%;
-}
-
 #info .row {
 	border-bottom: 1px solid #f0f0f0;
 }
@@ -119,7 +123,7 @@ h5, h6 {
 
 #header {
 	position: relative;
-	background-color: #fafafa;
+	background-color: var(--white);
 	z-index: 200;
 }
 
@@ -145,7 +149,6 @@ h5, h6 {
 #header .tag {
 	display: inline;
 	margin-top: 0!important;
-	letter-spacing: 2px;
 }
 
 #header .tag b {
@@ -271,10 +274,13 @@ h5, h6 {
 #video .video-wrap {
 	position: absolute;
 	top: 0;
-	left: 0;
-	right: 0;
+	left: 5%;
+	right: 5%;
 	bottom: 0;
 	overflow: hidden;
+	background-color: var(--green);
+	border-top-right-radius: 50% 30px;
+	border-top-left-radius: 50% 30px;
 }
 
 #video .video-wrap video {
@@ -282,6 +288,8 @@ h5, h6 {
 	width: 100%;
 	height: 100%;
 	position: relative;
+	opacity: 0.5;
+	filter: grayscale(100%) contrast(150%) brightness(135%);
 }
 
 /* AGE */
@@ -586,6 +594,11 @@ h5, h6 {
 		display: none;
 	}
 
+	#video .video-wrap {
+		left: 0;
+		right: 0;
+	}
+
 }
 
 /* LG */
@@ -593,6 +606,7 @@ h5, h6 {
 
 	.full-wrap {
 		padding-left: 100px;
+		padding-right: 100px;
 	}
 
 	#header {
