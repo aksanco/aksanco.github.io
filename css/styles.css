@@ -79,6 +79,8 @@ p {
 }
 
 .section-title {
+	text-transform: lowercase;
+	display: inline-block!important;
 	margin-top: 0!important;
 }
 
@@ -124,6 +126,8 @@ p {
 #header {
 	position: relative;
 	background-color: var(--white);
+	background: rgb(255,255,255);
+	background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(247,247,246,1) 100%);
 	z-index: 200;
 }
 
@@ -152,46 +156,6 @@ p {
 
 #header .tag b {
 	font-weight: 700;
-}
-
-#header .tag .slice {
-	position: relative;
-	display: inline-block;
-	visibility: hidden;
-}
-
-#header .tag .slice:before,
-#header .tag .slice:after {
-	visibility: visible;
-	content: attr(data-word);
-	position: absolute;
-	overflow: hidden;
-	font-size: 1em;
-	transition: 0.3s all;
-}
-
-#header .tag .slice:before {
-	-webkit-clip-path: polygon(0 0, 30% 0, 70% 100%, 0 100%);
-	clip-path: polygon(0 0, 30% 0, 70% 100%, 0 100%);
-	top: 0.075em;
-	left: 0;
-}
-
-#header .tag .slice:after {
-	-webkit-clip-path: polygon(30% 0, 100% 0, 100% 100%, 70% 100%);
-	clip-path: polygon(30% 0, 100% 0, 100% 100%, 70% 100%);
-	top: -0.075em;
-	left: -0.2em;
-}
-
-#header .tag:hover .slice:before {
-	top: 0;
-	left: 0;
-}
-
-#header .tag:hover .slice:after {
-	top: 0;
-	left: 0;
 }
 
 /* SERVICES */
@@ -269,19 +233,19 @@ p {
 	position: relative;
 	z-index: 20;
 	height: 65vh;
-	background: linear-gradient(to bottom, var(--white) 25%, white 25%);
+	background-color: white;
 }
 
 #video .video-wrap {
 	position: absolute;
 	top: 0;
 	left: 5%;
-	right: 5%;
+	right: calc(5% + 100px);
 	bottom: 0;
 	overflow: hidden;
 	background-color: var(--green);
-	-webkit-clip-path: polygon(50% 10%, 70% 0, 100% 0, 100% 90%, 70% 90%, 50% 100%, 30% 90%, 0 90%, 0 0, 30% 0);
-clip-path: polygon(50% 10%, 70% 0, 100% 0, 100% 90%, 70% 90%, 50% 100%, 30% 90%, 0 90%, 0 0, 30% 0);
+	-webkit-clip-path: polygon(50% 10%, 50% 0, 100% 0, 100% 90%, 50% 90%, 50% 100%, 0 100%, 0 10%);
+clip-path: polygon(50% 10%, 50% 0, 100% 0, 100% 90%, 50% 90%, 50% 100%, 0 100%, 0 10%);
 }
 
 #video .video-wrap:after {
@@ -306,23 +270,18 @@ clip-path: polygon(50% 10%, 70% 0, 100% 0, 100% 90%, 70% 90%, 50% 100%, 30% 90%,
 /* AGE */
 
 #age {
-	background-color: var(--yellow);
 	position: relative;
 	overflow: hidden;
+	background-color: var(--white);
 }
 
 #age p {
 	color: #aaa;
 }
 
-#age .row {
-	position: relative;
-	z-index: 100;
-}
-
 #age .age-box {
 	width: 100%;
-	border: 5px solid var(--black);
+	border: 5px solid var(--yellow);
 	padding-top: 100%;
 	float: left;
 	position: relative;
@@ -337,7 +296,7 @@ clip-path: polygon(50% 10%, 70% 0, 100% 0, 100% 90%, 70% 90%, 50% 100%, 30% 90%,
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	color: var(--black);
+	color: var(--yellow);
 }
 
 .age-box div span {
@@ -348,7 +307,7 @@ clip-path: polygon(50% 10%, 70% 0, 100% 0, 100% 90%, 70% 90%, 50% 100%, 30% 90%,
 /* PROJECTS */
 
 #projects {
-	background-color: white;
+	background-color: var(--white);
 }
 
 #projects .row {

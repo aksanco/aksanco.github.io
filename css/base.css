@@ -44,7 +44,7 @@ img {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	margin: 2em 0!important;
+	margin: 1em 0 2em 0!important;
   padding: 0!important;
 	line-height: 1.25em;
   font-weight: bold;
