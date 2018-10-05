@@ -414,7 +414,6 @@ clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
   fill: var(--white);
   height: 2.5em;
   width: auto;
-  float: left;
 }
 
 #footer i {
@@ -461,6 +460,11 @@ clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
   #age {
 		background-color: var(--yellow);
 	}
+  
+  #footer,
+  #footer ul {
+    text-align: center;
+  }
 
 }
 
