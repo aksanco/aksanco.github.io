@@ -100,6 +100,14 @@ p {
   height: 100px;
 }
 
+.nav .row {
+  padding: 0 30px!important;
+}
+
+.nav .main-nav {
+  display: none!important;
+}
+
 .nav .logo {
 	width: 60px;
 }
@@ -111,7 +119,7 @@ p {
 /* HEADER */
 
 #header {
-	background-color: var(--white);
+	background-color: #f7f7f7;
   position: relative;
 }
 
@@ -120,17 +128,17 @@ p {
   z-index: 100;
 }
 
-#header .tag {
+section .title {
   background: linear-gradient(to right, var(--yellow) 0%, var(--yellow) 100%);
-  background-size: 0px 1em;
+  background-size: 0px 0.8em;
 	background-repeat: no-repeat;
   background-position: left 100%;
 	display: inline;
   transition: 1s all;
 }
 
-#header:hover .tag {
-  background-size: 100% 1em;
+section:hover .title {
+  background-size: 100% 0.8em;
 }
 
 #header .video-wrap {
@@ -142,7 +150,7 @@ p {
 	overflow: hidden;
 	background-color: var(--green);
   -webkit-clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
-clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
 }
 
 #header .video-wrap video {
@@ -151,7 +159,7 @@ clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
 	height: 100%;
 	position: relative;
 	opacity: 0.5;
-	filter: grayscale(100%) contrast(200%) brightness(50%);
+	filter: grayscale(100%) contrast(200%) brightness(75%);
 }
 
 /* SERVICES */
@@ -162,25 +170,33 @@ clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
 
 #services .card {
 	height: 100%;
+  position: relative;
+}
+
+#services .card:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  left: 50%;
+  right: 50%;
+  background-color: #f7f7f7;
+  transition: 0.3s all;
+}
+
+#services .card:hover:before {
+  left: -30px;
+  right: -30px;
+  top: -30px;
+  bottom: -30px;
 }
 
 .card-title,
 .card-body {
 	float: left;
 	width: 100%;
-}
-
-.card-body p {
-	transition: 1s all;
-	background: linear-gradient(to right, var(--yellow) 0%, var(--yellow) 100%);
-  background-size: 0px 1em;
-	background-repeat: no-repeat;
-  background-position: left 100%;
-	display: inline;
-}
-
-.card:hover .card-body p {
-  background-size: 100% 1em;
+  position: relative;
+  z-index: 20;
 }
 
 .card-title h4 {
@@ -191,7 +207,7 @@ clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
 .card-title h4:after {
 	content: "";
 	position: absolute;
-	bottom: 0;
+	bottom: -0.25em;
 	left: 0;
 	width: 100%;
 	height: 1px;
@@ -431,6 +447,10 @@ clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
 /* SM */
 @media only screen and (max-width: 575px) {
   
+  .nav .row {
+    padding: 0!important;
+  }
+  
   #footer ul li {
     display: block;
     text-align: center;
@@ -446,7 +466,7 @@ clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
 }
 
 @media only screen and (max-width: 767px) {
-
+  
 	#header .video-wrap {
     width: 100%;
     clip-path: none;
@@ -487,17 +507,6 @@ clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
 	.white {
 		background-color: rgba(255,255,255,1)!important;
 		box-shadow: 0 0 10px rgba(0,0,0,0.2);
-	}
-
-	.nav .logo {
-		height: 60px;
-		width: auto;
-		display: flex;
-		align-items: center;
-	}
-
-	.nav .logo img {
-		height: 20px!important;
 	}
 
 	.nav label i {
