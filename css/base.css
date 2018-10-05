@@ -16,7 +16,7 @@ body {
 html {
 	box-sizing: border-box;
 	font-size: 13px;
-	line-height: 1.9em!important;
+	line-height: 2em!important;
 	font-family: 'Work Sans', sans-serif;
 	color: #333;
 }
@@ -46,7 +46,7 @@ img {
 h1, h2, h3, h4, h5, h6 {
 	margin: 0.25em 0 1em 0!important;
   padding: 0!important;
-	line-height: 1.25em;
+	line-height: calc(1.25em + 15px);
   font-weight: bold;
 }
 
@@ -91,7 +91,7 @@ b { font-weight: 700; }
 }
 
 .wrap {
-  --wrap-pad: 10vh;
+  --wrap-pad: 12.5vh;
   padding: var(--wrap-pad) 0;
   height: 100%;
 }
@@ -111,6 +111,7 @@ b { font-weight: 700; }
   width: 90%;
 	overflow: visible;
 	margin: 0 auto;
+  padding: 2vh 0;
 }
 
 .full-width {

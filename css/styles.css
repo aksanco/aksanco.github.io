@@ -2,7 +2,7 @@
 /* CSS Document */
 
 :root {
-	--green: #048549;
+	--green: #13B462;
 	--yellow: #FFE500;
 	--red: #D24040;
 	--blue: #014EA5;
@@ -31,6 +31,7 @@ body {
 a, a:active, a:hover, a:visited {
 	text-decoration: none;
 	color: #333;
+  font-weight: 600;
 }
 
 .small-link {
@@ -60,12 +61,12 @@ a:hover {
 	color: var(--green);
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5 {
   font-family: 'Merriweather', serif;
 	font-weight: 700;
 }
 
-h5, h6 {
+h6 {
 	font-family: 'Oswald', sans-serif;
 	text-transform: uppercase;
 	font-weight: 400;
@@ -73,8 +74,9 @@ h5, h6 {
 }
 
 p {
-	font-family: 'Merriweather', serif;
-	font-weight: 300;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 400;
+  color: #777;
 }
 
 .section-title {
@@ -94,7 +96,8 @@ p {
   z-index: 1000;
   top: 0;
   left: 0;
-	transition: 0.3s all;
+  transition: 0.3s all;
+  display: none!important;
 }
 
 .nav .logo {
@@ -103,11 +106,6 @@ p {
 
 .nav label i {
 	color: var(--black);
-}
-
-@keyframes rotatefull {
-	from { transform: rotate(0deg); }
-	to { transform: rotate(360deg); }
 }
 
 /* INFO */
@@ -136,41 +134,24 @@ p {
 	background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(247,247,246,1) 100%);
 }
 
-#header .tag span {
-	font-size: 0.5em;
-	color: var(--green);
-}
-
 /* VIDEO */
 
 #video {
 	position: relative;
 	z-index: 20;
 	height: 65vh;
+	-webkit-clip-path: polygon(50% 10%, 100% 0, 100% 100%, 0 100%, 0 0);
+	clip-path: polygon(50% 10%, 100% 0, 100% 100%, 0 100%, 0 0);
 }
 
 #video .video-wrap {
 	position: absolute;
 	top: 0;
-	left: 5%;
-	right: calc(5% + 100px);
+	left: 0;
+	right: 0;
 	bottom: 0;
 	overflow: hidden;
 	background-color: var(--green);
-	-webkit-clip-path: polygon(50% 10%, 50% 0, 100% 0, 100% 90%, 50% 90%, 50% 100%, 0 100%, 0 10%);
-	clip-path: polygon(50% 10%, 50% 0, 100% 0, 100% 90%, 50% 90%, 50% 100%, 0 100%, 0 10%);
-}
-
-#video .video-wrap:after {
-	content: "";
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 50%;
-	margin-left: -2px;
-	width: 3px;
-	background-color: var(--white);
-
 }
 
 #video .video-wrap video {
@@ -345,7 +326,7 @@ p {
 /* CLIENTS */
 
 #clients {
-	background-color: #f0f0f0;
+	background-color: var(--green);
 	position: relative;
 	overflow: hidden;
 }
@@ -394,43 +375,86 @@ p {
 	overflow: hidden;
 }
 
-#footer h5 {
-	color: var(--green);
+#footer ul li {
+  display: inline;
+  padding-left: 30px;
 }
 
-#footer li a {
-	color: #777;
+#footer a {
+  display: inline-block;
+  color: #eee;
+  position: relative;
+  transition: 0.3s all;
 }
 
-#footer:after {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background-image: url(../img/bg/shattered-dark.png);
-	opacity: 0.3;
-	display: none;
+#footer a:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 1px;
+  width: 0;
+  transition: 0.3s all;
+  background-color: var(--green);
 }
 
-#footer .wrap {
-	position: relative;
-	z-index: 900;
+#footer a:hover {
+  color: #fafafa;
 }
 
-#unions span {
-	transition: 0.3s all;
+#footer a:hover:after {
+  width: 100%;
 }
 
-#footer:hover #unions span {
-	color: var(--green);
+#footer .active {
+  color: #777;
+}
+
+#footer #unions {
+  font-weight: 700;
+  color: #777;
+  font-family: 'Merriweather', serif;
+  font-size: 1.25em;
+	transition: 1s all;
+	background: linear-gradient(to right, var(--yellow) 0%, var(--yellow) 100%);
+  background-size: 0px 1.25em;
+	background-repeat: no-repeat;
+  background-position: left 100%;
+	display: inline;
+}
+
+#footer:hover #unions {
+  background-size: 100% 1.25em;
+  color: var(--black);
+}
+
+#footer #logo {
+  fill: var(--white);
+  height: 2.5em;
+  width: auto;
+  float: left;
+}
+
+#footer i {
+  font-size: 1.5em;
+  color: #fafafa;
+  display: inline-block;
+  padding: 0 15px;
+}
+
+#footer #copyright {
+  font-weight: 600;
+  display: block;
 }
 
 /* SM */
 @media only screen and (max-width: 575px) {
 
-
+  #footer ul li {
+    display: block;
+    text-align: center;
+    padding: 15px 0;
+  }
 
 }
 
@@ -529,11 +553,11 @@ p {
 /* LG */
 @media only screen and (min-width: 1200px) {
 
-	.full-wrap {
+	/* .full-wrap {
 		padding-left: 100px;
-	}
+	} */
 
-	#info,
+	/* #info,
 	#header,
 	#video,
 	#services,
@@ -542,11 +566,7 @@ p {
 	#clients,
 	#footer {
 		padding-right: 100px;
-	}
-
-	#header {
-		padding-top: 0;
-	}
+	} */
 
 	.nav {
 	  position: fixed;
