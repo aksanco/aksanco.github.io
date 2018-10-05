@@ -92,12 +92,12 @@ p {
 /* NAVIGATION */
 
 .nav {
-  position: fixed;
+  position: absolute;
   z-index: 1000;
   top: 0;
   left: 0;
-  transition: 0.3s all;
-  display: none!important;
+  right: 0;
+  height: 100px;
 }
 
 .nav .logo {
@@ -108,62 +108,57 @@ p {
 	color: var(--black);
 }
 
-/* INFO */
-
-#info {
-	background-color: var(--white);
-}
-
-#info .box  {
-	padding-top: 10px;
-	padding-bottom: 10px;
-}
-
-#info .row {
-	border-bottom: 1px solid rgba(0,0,0,0.2);
-}
-
-#info h5 {
-	margin: 0!important;
-}
-
 /* HEADER */
 
 #header {
-	background: rgb(255,255,255);
-	background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(247,247,246,1) 100%);
+	background-color: var(--white);
+  position: relative;
 }
 
-/* VIDEO */
-
-#video {
-	position: relative;
-	z-index: 20;
-	height: 65vh;
-	-webkit-clip-path: polygon(50% 10%, 100% 0, 100% 100%, 0 100%, 0 0);
-	clip-path: polygon(50% 10%, 100% 0, 100% 100%, 0 100%, 0 0);
+#header .row {
+  position: relative;
+  z-index: 100;
 }
 
-#video .video-wrap {
+#header .tag {
+  background: linear-gradient(to right, var(--yellow) 0%, var(--yellow) 100%);
+  background-size: 0px 1em;
+	background-repeat: no-repeat;
+  background-position: left 100%;
+	display: inline;
+  transition: 1s all;
+}
+
+#header:hover .tag {
+  background-size: 100% 1em;
+}
+
+#header .video-wrap {
 	position: absolute;
 	top: 0;
-	left: 0;
 	right: 0;
 	bottom: 0;
+  width: 45%;
 	overflow: hidden;
 	background-color: var(--green);
+  -webkit-clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
+clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
 }
 
-#video .video-wrap video {
+#header .video-wrap video {
 	object-fit: cover;
 	width: 100%;
 	height: 100%;
 	position: relative;
 	opacity: 0.5;
-	filter: grayscale(100%) contrast(150%) brightness(75%);
+	filter: grayscale(100%) contrast(200%) brightness(50%);
 }
 
 /* SERVICES */
+
+#services {
+  background-color: white;
+}
 
 #services .card {
 	height: 100%;
@@ -196,7 +191,7 @@ p {
 .card-title h4:after {
 	content: "";
 	position: absolute;
-	top: 110%;
+	bottom: 0;
 	left: 0;
 	width: 100%;
 	height: 1px;
@@ -326,7 +321,7 @@ p {
 /* CLIENTS */
 
 #clients {
-	background-color: var(--green);
+	background-color: #eee;
 	position: relative;
 	overflow: hidden;
 }
@@ -345,25 +340,12 @@ p {
 
 #clients .client {
 	width: 100%;
-	height: 90px;
-	background-color: var(--white);
+	height: 100px;
+	background-color: var(--red);
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	border-radius: 5px;
-}
-
-#clients .circle {
-	animation: rotatefull 75s infinite linear;
-	position: absolute;
-	top: 50%;
-	right: -60vw;
-	width: 100vw;
-	height: 100vw;
-	margin-top: -50vw;
-	background-color: var(--green);
-	-webkit-clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
-	clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
 }
 
 /* FOOTER */
@@ -436,7 +418,7 @@ p {
 }
 
 #footer i {
-  font-size: 1.5em;
+  font-size: 1.25em;
   color: #fafafa;
   display: inline-block;
   padding: 0 15px;
@@ -449,7 +431,7 @@ p {
 
 /* SM */
 @media only screen and (max-width: 575px) {
-
+  
   #footer ul li {
     display: block;
     text-align: center;
@@ -466,7 +448,17 @@ p {
 
 @media only screen and (max-width: 767px) {
 
-	#age {
+	#header .video-wrap {
+    width: 100%;
+    clip-path: none;
+    background-color: var(--green);
+  }
+  
+  #header .video-wrap video {
+    opacity: 0.2;
+  }
+  
+  #age {
 		background-color: var(--yellow);
 	}
 
@@ -553,126 +545,6 @@ p {
 /* LG */
 @media only screen and (min-width: 1200px) {
 
-	/* .full-wrap {
-		padding-left: 100px;
-	} */
-
-	/* #info,
-	#header,
-	#video,
-	#services,
-	#age,
-	#projects,
-	#clients,
-	#footer {
-		padding-right: 100px;
-	} */
-
-	.nav {
-	  position: fixed;
-	  z-index: 1000;
-	  top: 0;
-	  left: 0;
-		background-color: var(--black);
-		width: 100px;
-		height: 100vh;
-		overflow: hidden;
-		transition: 0.3s ease all;
-		padding-bottom: 100px;
-	}
-
-	.nav:hover {
-		--expanded-nav: 500px;
-		width: var(--expanded-nav);
-	}
-
-	.white .logo {
-		background-color: var(--dark-gray)!important;
-	}
-
-	.nav .row {
-		width: 100%;
-		height: 100%;
-		display: flex;
-		flex-direction: column;
-	}
-
-	.nav .logo {
-		width: 100px;
-		height: 100px;
-		transition: 0.3s all;
-		background-color: var(--black);
-	}
-
-	@keyframes rotated {
-		from { transform: rotate(0deg); }
-		to { transform: rotate(360deg); }
-	}
-
-	.nav:hover .logo img {
-		animation-name: rotated;
-		animation-duration: 0.5s;
-	}
-
-	.nav .main-nav {
-		width: var(--expanded-nav);
-		float: left;
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-	}
-
-	.main-nav .menu {
-		width: 100%;
-		overflow: hidden!important;
-	}
-
-	.main-nav .menu li {
-		display: block;
-		width: 100vw;
-		float: left;
-		border-top: 1px solid rgba(255,255,255,0.1);
-	}
-
-	.main-nav .menu li:first-of-type {
-		border-top: none;
-	}
-
-	.main-nav .menu li a {
-		padding: 0;
-		width: 100%;
-		text-decoration: none;
-		color: var(--green);
-		transition: 0.3s all;
-	}
-
-	.main-nav .menu li a i,
-	.main-nav .menu li a span {
-		line-height: 75px;
-	}
-
-	.main-nav .menu li a i {
-		display: inline-block;
-		width: 100px;
-		text-align: center;
-		font-size: 1.5em;
-		float: left;
-	}
-
-	.main-nav .menu li a span {
-		font-family: 'Oswald', sans-serif;
-		text-transform: uppercase;
-		font-weight: 400;
-		font-size: 1em;
-		letter-spacing: 2px;
-		float: left;
-		transition: 0.3s all;
-		color: rgba(255,255,255,0.2);
-	}
-
-	.main-nav .menu li:hover a span {
-		color: var(--green);
-	}
+	
 
 }
