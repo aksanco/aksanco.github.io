@@ -186,33 +186,12 @@ section:hover .title {
 
 #services .card {
 	height: 100%;
-  position: relative;
-}
-
-#services .card:before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  bottom: 50%;
-  left: 50%;
-  right: 50%;
-  background-color: #f7f7f7;
-  transition: 0.3s all;
-}
-
-#services .card:hover:before {
-  left: -30px;
-  right: -30px;
-  top: -30px;
-  bottom: -30px;
 }
 
 .card-title,
 .card-body {
 	float: left;
 	width: 100%;
-  position: relative;
-  z-index: 20;
 }
 
 .card-title h4 {
@@ -223,7 +202,7 @@ section:hover .title {
 .card-title h4:after {
 	content: "";
 	position: absolute;
-	bottom: -0.25em;
+	top: 125%;
 	left: 0;
 	width: 100%;
 	height: 1px;
@@ -235,6 +214,7 @@ section:hover .title {
 #age {
 	position: relative;
 	overflow: hidden;
+  background-color: var(--yellow);
 }
 
 #age p {
@@ -269,7 +249,7 @@ section:hover .title {
 /* PROJECTS */
 
 #projects {
-	background-color: var(--white);
+	background-color: white;
 }
 
 #projects .row {
