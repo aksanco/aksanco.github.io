@@ -115,7 +115,7 @@ b { font-weight: 700; }
 }
 
 .full-width {
-  width: 90%!important;
+  width: 100%!important;
 }
 
 .col {
@@ -167,16 +167,16 @@ b { font-weight: 700; }
 }
 
 .nav .logo {
-  width: 100px;
+  width: auto!important;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.nav .logo img {
-  height: 100%;
-  max-height: calc(var(--nav-height) / 2.5)!important;
+.nav .logo img,
+.nav .logo svg {
+  height: calc(var(--nav-height) / 2.5)!important;
   width: auto;
   float: left;
 }
@@ -478,6 +478,6 @@ a[data-tooltip]:hover:before {
 
 @media only screen and (min-width: 1440px) {
 
-
+  
 
 }

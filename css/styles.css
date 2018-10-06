@@ -103,12 +103,12 @@ p {
   padding: 0 30px!important;
 }
 
-.nav .logo {
-	width: 60px;
+.nav .logo #logo {
+  fill: #fafafa;
+  transition: 0.3s all;
 }
 
-.nav .logo #logo {
-  height: 40px!important;
+.nav .logo #logo:hover {
   fill: var(--green);
 }
 
@@ -125,13 +125,15 @@ p {
 
 #header .video-wrap {
 	position: absolute;
-	top: 100px;
-  bottom: -100px;
+	top: 15vh;
+  bottom: -15vh;
   right: 0;
   width: 40%;
 	overflow: hidden;
 	background-color: var(--green);
   box-shadow: 0 50px 200px rgba(0,0,0,0.75);
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
 }
 
 #header .video-wrap video {
@@ -253,81 +255,14 @@ section:hover .title {
 	background-color: white;
 }
 
-#projects .row {
-	position: relative;
-	z-index: 200;
+.your-class div {
+  height: 50vh;
 }
 
-.project {
-	float: left;
-	height: 40vh;
-	width: 100%;
-	overflow: hidden;
-	position: relative;
-	border-radius: 5px;
-	background-color: var(--red);
-}
-
-.project .project-img {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-}
-
-.project .project-img img {
-	object-fit: cover;
-	width: 100%;
-	height: 100%;
-	filter: grayscale(100%) brightness(125%) contrast(25%);
-}
-
-.project .project-info {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.project .project-info i {
-	font-size: 2em;
-	color: white;
-	opacity: 1;
-	transition: 0.3s all;
-}
-
-.project:hover .project-info {
-	opacity: 0;
-}
-
-.project .project-caption {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background-color: rgba(0,0,0,0.8);
-	opacity: 0;
-	transition: 0.3s all;
-	padding: 30px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	color: white;
-}
-
-.project:hover .project-caption {
-	opacity: 1;
-}
-
-.project .project-caption div {
-	width: 100%;
-	text-align: center;
+.slick-slide {
+  margin: 0 15px;
+  background-color: var(--red);
+  border-radius: 25px;
 }
 
 /* CLIENTS */
@@ -356,7 +291,7 @@ section:hover .title {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	border: 3px dashed var(--green);
+	border: 1px dashed var(--green);
 }
 
 /* FOOTER */
@@ -411,15 +346,15 @@ section:hover .title {
   font-size: 1.25em;
 	transition: 1s all;
 	background: linear-gradient(to right, var(--yellow) 0%, var(--yellow) 100%);
-  background-size: 0px 1.25em;
+  background-size: 0px 2em;
 	background-repeat: no-repeat;
   background-position: left 100%;
 	display: inline;
 }
 
 #footer:hover #unions {
-  background-size: 100% 1.25em;
-  color: var(--black);
+  background-size: 100% 2em;
+  color: black;
 }
 
 #footer #logo {
@@ -549,10 +484,9 @@ section:hover .title {
 @media only screen and (min-width: 1200px) {
   
   .nav .main-nav .menu li a {
-		font-family: 'Merriweather', serif;
+    font-family: 'Merriweather', serif;
     font-weight: 900;
 		line-height: 3em;
-    text-transform: uppercase;
 		display: block;
 		color: #777;
     transition: 0.3s all;
@@ -561,6 +495,14 @@ section:hover .title {
   .nav .main-nav .menu li a:hover {
     background-color: var(--black);
     color: var(--yellow);
+  }
+  
+  .nav .row {
+    justify-content: space-between;
+  }
+  
+  .nav .logo {
+    margin-right: 100px;
   }
 
 }
