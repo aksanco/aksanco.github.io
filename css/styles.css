@@ -131,6 +131,7 @@ p {
   width: 40%;
 	overflow: hidden;
 	background-color: var(--green);
+  box-shadow: 0 50px 200px rgba(0,0,0,0.75);
 }
 
 #header .video-wrap video {
@@ -546,16 +547,19 @@ section:hover .title {
 
 /* LG */
 @media only screen and (min-width: 1200px) {
-
-	.nav .main-nav .menu li a {
-		font-family: 'Merriweather', sans-serif;
-		font-weight: 900;
-		line-height: 100px;
+  
+  .nav .main-nav .menu li a {
+		font-family: 'Merriweather', serif;
+    font-weight: 900;
+		line-height: 3em;
+    text-transform: uppercase;
 		display: block;
 		color: #777;
+    transition: 0.3s all;
 	}
   
   .nav .main-nav .menu li a:hover {
+    background-color: var(--black);
     color: var(--yellow);
   }
 
