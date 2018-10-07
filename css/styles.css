@@ -2,12 +2,13 @@
 /* CSS Document */
 
 :root {
-	--green: #048549;
+	--green: #04945C;
 	--yellow: #FFE500;
 	--red: #D24040;
 	--blue: #014EA5;
 	--orange: #FF8800;
   --white: #F7F7F6;
+  --lightgray: #7C8096;
 	--darkgray: #1F1F27;
   --black: #181821;
 }
@@ -104,7 +105,7 @@ p {
 }
 
 .nav .logo #logo {
-  fill: #fafafa;
+  fill: var(--green);
   transition: 0.3s all;
 }
 
@@ -131,9 +132,7 @@ p {
   width: 40%;
 	overflow: hidden;
 	background-color: var(--green);
-  box-shadow: 0 50px 200px rgba(0,0,0,0.75);
-  border-top-left-radius: 25px;
-  border-bottom-left-radius: 25px;
+  box-shadow: 25px 25px 100px rgba(0,0,0,0.75);
 }
 
 #header .video-wrap video {
@@ -141,7 +140,7 @@ p {
 	width: 100%;
 	height: 100%;
 	position: absolute;
-	opacity: 0.2;
+	opacity: 0.1;
 	filter: grayscale(100%) contrast(200%) brightness(75%);
 }
 
@@ -151,22 +150,23 @@ p {
 }
 
 section .title {
-  background: linear-gradient(to right, var(--yellow) 0%, var(--yellow) 100%);
-  background-size: 0px 0.5em;
+  background: linear-gradient(to right, var(--green) 0%, var(--green) 100%);
+  background-size: 0px 0.2em;
 	background-repeat: no-repeat;
   background-position: left 100%;
 	display: inline;
+  position: relative;
   transition: 1s all;
 }
 
 section:hover .title {
-  background-size: 100% 0.5em;
+  background-size: 100% 0.2em;
 }
 
 #header .title {
   color: #fafafa;
   background: linear-gradient(to right, var(--green) 0%, var(--green) 100%);
-  background-size: 0px 0.5em;
+  background-size: 0px 0.2em;
 	background-repeat: no-repeat;
   background-position: left 100%;
 	display: inline;
@@ -174,7 +174,7 @@ section:hover .title {
 }
 
 #header:hover .title {
-  background-size: 100% 0.5em;
+  background-size: 100% 0.2em;
 }
 
 #header a {
@@ -485,7 +485,8 @@ section:hover .title {
   
   .nav .main-nav .menu li a {
     font-family: 'Merriweather', serif;
-    font-weight: 900;
+    font-weight: 700;
+    text-decoration: underline;
 		line-height: 3em;
 		display: block;
 		color: #777;
@@ -494,7 +495,7 @@ section:hover .title {
   
   .nav .main-nav .menu li a:hover {
     background-color: var(--black);
-    color: var(--yellow);
+    color: #fafafa;
   }
   
   .nav .row {
