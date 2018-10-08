@@ -8,7 +8,7 @@
 	--blue: #014EA5;
 	--orange: #FF8800;
   --white: #F7F7F6;
-  --lightgray: #7C8096;
+  --lightgray: #9090A7;
 	--darkgray: #1F1F27;
   --black: #181821;
 }
@@ -123,18 +123,19 @@ p {
 	background-color: var(--darkgray);
   position: relative;
   background: radial-gradient(at top left, #2a2a2a 0%, var(--darkgray) 75%);
+  overflow: hidden;
 }
 
 #header .video-wrap {
 	position: absolute;
 	top: 15vh;
-  bottom: -15vh;
+  bottom: 0;
   right: 0;
   width: 40%;
 	overflow: hidden;
-	background-color: var(--green);
-  -webkit-clip-path: polygon(15% 0, 100% 0, 100% 100%, 15% 100%, 0 50%);
-  clip-path: polygon(15% 0, 100% 0, 100% 100%, 15% 100%, 0 50%);
+	background-color: var(--lightgray);
+  border-top-left-radius: 50px;
+  box-shadow: 0 0 100px rgba(0,0,0,0.8);
 }
 
 #header .video-wrap video {
@@ -152,7 +153,7 @@ p {
 }
 
 section .title {
-  background: linear-gradient(to right, #ddd 0%, #ddd 100%);
+  background: linear-gradient(to right, var(--lightgray) 0%, var(--lightgray) 100%);
   background-size: 0px 0.15em;
 	background-repeat: no-repeat;
   background-position: left 100%;
@@ -168,7 +169,7 @@ section:hover .title {
 
 #header .title {
   color: #fafafa;
-  background: linear-gradient(to right, var(--green) 0%, var(--green) 100%);
+  background: linear-gradient(to right, var(--lightgray) 0%, var(--lightgray) 100%);
   background-size: 0px 0.15em;
 	background-repeat: no-repeat;
   background-position: left 100%;
